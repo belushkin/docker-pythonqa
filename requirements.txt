@@ -1,0 +1,8 @@
+dodgy==0.1.9
+flake8==2.5.2
+flake8-debugger==1.4.0
+flake8-dodgy==0.0.1
+mccabe==0.4.0
+pep8==1.7.0
+pep8-naming==0.3.3
+pyflakes==1.0.0
