@@ -4,8 +4,8 @@ services:
   - docker
 
 script:
-  - docker build -t dbarbar/pythonqa:${TRAVIS_COMMIT} .
+  - docker build -t dbarbar/pythonqa:latest .
 
 after_success:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker push dbarbar/pythonqa:${TRAVIS_COMMIT}
+  - docker push dbarbar/pythonqa:latest
