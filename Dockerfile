@@ -2,9 +2,8 @@ FROM gliderlabs/alpine:3.3
 
 MAINTAINER David Barbarisi <davidbarbarisi@gmail.com>
 
-RUN apk-install python py-pip
-
-RUN pip install --upgrade pip
+RUN apk-install python py-pip && \
+    pip install --upgrade pip
 
 COPY requirements.txt /
 
