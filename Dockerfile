@@ -1,11 +1,10 @@
-FROM alpine:3.3
+FROM gliderlabs/alpine:3.3
 
 MAINTAINER David Barbarisi <davidbarbarisi@gmail.com>
 
-RUN apk update && apk add \
-  python \
-  py-pip \
-  && rm -rf /var/cache/apk/*
+RUN apk-install python py-pip
+
+RUN pip install --upgrade pip
 
 COPY requirements.txt /
 
