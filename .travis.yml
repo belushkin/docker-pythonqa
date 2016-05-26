@@ -8,6 +8,8 @@ services:
 script:
   - docker build -t dbarbar/pythonqa:${TRAVIS_COMMIT} .
 
-deploy:
+before_deploy:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+
+deploy:
   - docker push dbarbar/pythonqa:${TRAVIS_COMMIT}
